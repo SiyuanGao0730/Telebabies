@@ -93,7 +93,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', login.view);
+app.get('/', loginB.view);
 app.get('/loginB', loginB.view);
 app.get('/index', index.view);
 app.get('/indexB', indexB.view);
@@ -105,6 +105,7 @@ app.get('/record', record.view);
 app.get('/result', result.view); 
 app.get('/result2', result.view2); 
 app.get('/result-history', resulthistory.view); 
+app.get('/result-history2', resulthistory.view2); 
 app.get('/familymembers', familymembers.view);
 
 // Example route
