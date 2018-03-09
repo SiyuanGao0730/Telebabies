@@ -43,7 +43,6 @@ function initGestures() {
 		$('.profile-photo').bind('taphold', tapholdHandler); 
 
 		function tapholdHandler(event){
-			console.log('aaa'); 
 			//$('phone-input').show(); 
 		}
 	

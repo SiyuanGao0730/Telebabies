@@ -13,7 +13,6 @@ function initializePage() {
 	
 	$("#history-button").click(function(){
 		ga("send", "event", "button", "click");
-		console.log("In listener.");
 	});
 }
 

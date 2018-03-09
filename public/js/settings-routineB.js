@@ -17,7 +17,6 @@ function initializePage() {
 	mobiscroll.time('#demo', {
 		onSet: function (event, inst) {
             selectedTime = inst.getVal(); // Call the getVal method
-       		console.log(selectedTime);
     	},
         theme: 'ios-dark',     // Specify theme like: theme: 'ios' or omit setting to use default
         lang: 'en',            // Specify language like: lang: 'pl' or omit setting to use default
@@ -34,8 +33,6 @@ function confirm(e) {
 	// var selectedTime = $("#demo").mobiscroll('getVal');
 	// console.log(selectedTime);
 	var dateObj = new Date(Date.parse(selectedTime)); 
-	console.log(dateObj.getHours());
-	console.log(dateObj.getMinutes());
 
 	var size = data.routine.length;
 	if ((dateObj.getHours() || dateObj.getHours() == 0) && 

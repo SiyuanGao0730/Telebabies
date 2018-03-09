@@ -67,7 +67,6 @@ function signupClick(e) {
 			]
 	}`;
 
-	console.log(jsonNew);
 	data[username] = JSON.parse(jsonNew);
 	data[username].name = fn;
 	data[username].username = username;
