@@ -23,6 +23,7 @@ var record = require('./routes/record');
 var result = require('./routes/result'); 
 var resulthistory = require('./routes/result-history'); 
 var familymembers = require('./routes/familymembers');
+var signup = require('./routes/signup');
 
 var watson = require('watson-developer-cloud');
 var ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
@@ -107,6 +108,7 @@ app.get('/result2', result.view2);
 app.get('/result-history', resulthistory.view); 
 app.get('/result-history2', resulthistory.view2); 
 app.get('/familymembers', familymembers.view);
+app.get('/signup', signup.view);
 
 // Example route
 // app.get('/users', user.list);

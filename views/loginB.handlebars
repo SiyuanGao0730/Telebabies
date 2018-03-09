@@ -29,15 +29,17 @@
   <main role="main">
 
     <div class="logo">
-        <img src="/images/logo.png" id="logopic" class="img-responsive">
+        <img src="/images/loo.png" id="logopic" class="img-responsive">
+        <p id="logonote">Telebabies</p>
     </div>
+
     <div class="logininfo">
-    <div class="infobar">
-        <img src="/images/profileicon.png" id="profileicon" class="img-responsive">
-        <span>
-            <input id="nameinput" placeholder="Username">
-        </span>
-    </div>
+        <div class="infobar">
+            <img src="/images/profileicon.png" id="profileicon" class="img-responsive">
+            <span>
+                <input id="nameinput" placeholder="Username">
+            </span>
+        </div>
 
         <div class="infobar">
             <img src="/images/lock.png" id="lockicon" class="img-responsive">
@@ -46,14 +48,46 @@
             </span>
         </div>
     </div>
-        <div class="login-button">
-            <img src="/images/signin.png" href="#" class="img-responsive">
-        </div>
+
+    <div class="login-button" id="signinbutton">
+        <img src="/images/signin.png" href="#" class="img-responsive">
+    </div>
+
+   <!--  <div class="padding"></div> -->
+
+    <div class="login-button">
+        <a href="index">
+            <img src="/images/fblogin.png" href="#" class="img-responsive" id="fb-custom"></a>
+    </div>
+
 
     <div class="facebookLogin">
-    <a href="index" id="fbinstr">Or login with Facebook:
-        <fb:login-button size="small" scope="public_profile,email" href="#"  onlogin="checkLoginState();"></fb:login-button>
-    <a>
+    <a href="index" id="fblink">
+        <fb:login-button id="fbbutton" size="xlarge" scope="public_profile,email" href="#"  onlogin="checkLoginState();"></fb:login-button>
+    </a>
+    </div>
+
+    <p class="signupinstr">New friend? <span><a href="signup" style="color:#D3A9AC;">Sign up here</a></span>
+    </p>
+    <script>
+    (function ($) {
+    $(function () {
+        $("#fb-custom").on("click", function () {
+            FB.login(function(response) {
+                if (response.authResponse) {
+                    _wdfb_notifyAndRedirect();
+                }
+            });
+        });
+    });
+    })(jQuery);
+
+    // $("#fb-custom").on("click", function () {
+             
+    //          $("#fblink").trigger('click');
+    //      });    
+    </script>
+
     </p>
 
     </main><!-- /.container --></body>

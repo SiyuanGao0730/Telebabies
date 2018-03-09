@@ -16,6 +16,11 @@ function initializePage() {
 	//Use Facebook login instead
 	//$(".login-button").click(loginClick);
 
+	// $("#fb-custom").click( function (e) {
+ //    	$("#fbbutton").performClick();
+ //    	console.log("In Alt");
+ //    });
+
 }
 
 function loginClick(e) {
