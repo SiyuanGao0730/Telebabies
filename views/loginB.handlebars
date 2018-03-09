@@ -12,6 +12,7 @@
     <script src="js/jquery-1.11.0.js"></script>
     <script src="js/login.js"></script>
 
+
     <!-- Bootstrap core CSS -->
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -20,16 +21,6 @@
     <link href="/css/general.css" rel="stylesheet">
     <link href="/css/index.css" rel="stylesheet">
     <link href="/css/loginB.css" rel="stylesheet">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115192204-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-115192204-1');
-    </script>
 
 
 </head>
@@ -40,13 +31,18 @@
 
   <main role="main">
 
-    <div class="logininfo">
-    <div class="infobar">
-        <img src="/images/profileicon.png" id="profileicon" class="img-responsive">
-        <span>
-            <input id="nameinput" placeholder="Username">
-        </span>
+    <div class="logo">
+        <img src="/images/loo.png" id="logopic" class="img-responsive">
+        <p id="logonote">Telebabies</p>
     </div>
+
+    <div class="logininfo">
+        <div class="infobar">
+            <img src="/images/profileicon.png" id="profileicon" class="img-responsive">
+            <span>
+                <input id="nameinput" placeholder="Username">
+            </span>
+        </div>
 
         <div class="infobar">
             <img src="/images/lock.png" id="lockicon" class="img-responsive">
@@ -55,14 +51,46 @@
             </span>
         </div>
     </div>
-        <div class="login-button">
-            <img src="/images/signin.png" href="#" class="img-responsive">
-        </div>
+
+    <div class="login-button" id="signinbutton">
+        <img src="/images/signin.png" href="#" class="img-responsive">
+    </div>
+
+   <!--  <div class="padding"></div> -->
+
+    <div class="login-button">
+        <a href="index">
+            <img src="/images/fblogin.png" href="#" class="img-responsive" id="fb-custom"></a>
+    </div>
+
 
     <div class="facebookLogin">
-    <a href="index" id="fbinstr">Or login with Facebook:
-        <fb:login-button size="small" scope="public_profile,email" href="#"  onlogin="checkLoginState();"></fb:login-button>
-    <a>
+    <a href="index" id="fblink">
+        <fb:login-button id="fbbutton" size="xlarge" scope="public_profile,email" href="#"  onlogin="checkLoginState();"></fb:login-button>
+    </a>
+    </div>
+
+    <p class="signupinstr">New friend? <span><a href="signup" style="color:#D3A9AC;">Sign up here</a></span>
+    </p>
+    <script>
+    (function ($) {
+    $(function () {
+        $("#fb-custom").on("click", function () {
+            FB.login(function(response) {
+                if (response.authResponse) {
+                    _wdfb_notifyAndRedirect();
+                }
+            });
+        });
+    });
+    })(jQuery);
+
+    // $("#fb-custom").on("click", function () {
+             
+    //          $("#fblink").trigger('click');
+    //      });    
+    </script>
+
     </p>
 
     </main><!-- /.container --></body>
@@ -76,5 +104,17 @@
     <script src="js/bootstrap.min.js"></script>
     {{> facebook}}
     <script src="/js/facebook.js"></script>
+
+        <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-115192204-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
   </body>
 </html>

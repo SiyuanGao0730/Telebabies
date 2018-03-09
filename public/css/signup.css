@@ -1,0 +1,43 @@
+.login-button {
+	margin-top: 5vw;
+	width: 60vw;
+	position: relative;
+	margin-right: -50%; 
+    font-size: 3vh;
+}
+
+.inputbars {
+	margin-top: 5vw;
+	position: relative;
+	border-radius: 50px;
+	border: 1px solid;
+	border-color: #E3E3E3;
+	background: transparent;
+	outline: none;
+	height: 15vw;
+	width: 60vw;
+	height: 11vw;
+}
+
+.inputs {
+	position: relative;
+	/*border-radius: 50px;
+	border-style: solid;
+	border-color: #E3E3E3;*/
+	color: #d3a9ac;
+	border-style: none;
+	background: transparent;
+	outline: none;
+	height: 15vw;
+	width: 60vw;
+	height: 11vw;
+	margin-left: 5vw;
+	vertical-align: center;
+}
+
+.align {
+	position: relative;
+	display: block;
+	vertical-align: center;
+	top: 25vh;
+}

@@ -1,6 +1,6 @@
 .username {
-	position: absolute;
-	top: 5vh; 
+	position: relative;
+	top: 30vh; 
 	left: 50%;
 	margin-right: -50%; 
 	transform: translate(-50%, -50%);
@@ -9,7 +9,7 @@
 }
 
 .password {
-	position: absolute;
+	position: relative;
 	top: 20vh; 
 	left: 50%;
 	margin-right: -50%; 
@@ -19,10 +19,10 @@
 }
 
 .login-button {
-	margin-top: 30vw;
+	margin-top: 5vw;
 	width: 60vw;
-	position: absolute;
-	top: 35vh; 
+	position: relative;
+	top: 33vh; 
 	margin-right: -50%; 
 	transform: translate(-50%, -50%);
 	left: 50%;
@@ -35,20 +35,20 @@
 }
 
 .facebookLogin {
-	margin-top: 20vw;
+	margin-top: 5vw;
 	width: 70vw;
-	position: absolute;
-	top: 50vh; 
+	position: relative;
+	top: 25vh; 
 	/*left: 65%;*/
 	margin-right: -50%; 
-	transform: translate(0%, -50%);
+	transform: translate(20%, -50%);
     font-size: 3vh;
     border-radius: 50%;
 }
 
 .logininfo {
-	margin-top: 40vw;
-	top: 20vh;
+	position: relative;
+	top: 30vh;
 }
 
 .infobar {
@@ -58,14 +58,20 @@
     border-left-style: none;
     border-color: #E3E3E3;
     border-width: 0.5px;
-    width: 60vw;
+    width: 55vw;
     height: 10vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #nameinput {
 	background-color: transparent;
+	position: relative;
 	border-style: none;
-	transform: translate(5%, 150%);
+	/*transform: translate(5%, 150%);*/
+	margin-left: 13vw;
+	bottom: 2vw;
 	outline: none;
 	color: #D3A9AC;
 }
@@ -73,10 +79,12 @@
 #pwinput {
 	background-color: transparent;
 	border-style: none;
-	transform: translate(12%, 150%);
+	/*transform: translate(12%, 150%);*/
 	outline: none;
 	color: #D3A9AC;
-
+	margin-left: 13vw;
+	bottom: -2vw;
+	position: relative;
 }
 
 #profileicon {
@@ -84,8 +92,9 @@
 	max-width: 9vh; 
 	max-height: 9vh; 
 	position: relative;
-	transform: translate(-15%, 52%);
+/*	transform: translate(-15%, 52%);*/
 	float: left;
+	bottom: -5vw;
 }
 
 #lockicon {
@@ -93,12 +102,54 @@
 	max-width: 6vh; 
 	max-height: 6vh; 
 	position: relative;
-	transform: translate(-3%, 90%);
+	/*transform: translate(-3%, 90%);*/
 	float: left;
+	bottom: -7vw;
+	left: 1.5vw;
 }
 
 .padding {
 	background-color: transparent;
-	height: 5vh;
-	width: 100vw;
+	height: 1vh;
+}
+
+.logo {
+
+}
+
+#logopic {
+	width: 25vw; 
+	max-width: 20vh; 
+	max-height: 20vh; 
+	position: relative;
+	top: 20vh;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logonote {
+	position: relative;
+	top: 20vh;
+	text-align: center;
+	margin-top: 1vh;
+	font-size: 3vh;
+	color: #E3CED0;
+}
+
+#signinbutton {
+	margin-top: 5vh;
+}
+
+#fbbutton {
+	display: none;
+}
+
+.signupinstr {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 28vh;
+    position: relative;
+    left: 10vw;
 }
