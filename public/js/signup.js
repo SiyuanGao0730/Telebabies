@@ -13,6 +13,9 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+	if (window.localStorage.getItem('user')) {
+		location.href = 'index'; 
+	}
 	$("#signinbutton").click(signupClick);
 
 	// $("#fb-custom").click( function (e) {
@@ -45,7 +48,7 @@ function signupClick(e) {
 		return; 
 	 }
  
-		var jsonNew =  `{
+		var jsonNew =  {
 		"name":"Rick Ord",
 		"username":"test123",
 		"password":"123456",
@@ -65,9 +68,9 @@ function signupClick(e) {
 		"routine":
 			[
 			]
-	}`;
+	};
 
-	data[username] = JSON.parse(jsonNew);
+	data[username] = jsonNew;
 	data[username].name = fn;
 	data[username].username = username;
 	data[username].phone = phone;
