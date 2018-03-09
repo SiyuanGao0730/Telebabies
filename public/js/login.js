@@ -18,10 +18,6 @@ function initializePage() {
 	}
 	$("#signinbutton").click(loginClick);
 
-	// $("#fb-custom").click( function (e) {
- //    	$("#fbbutton").performClick();
- //    	console.log("In Alt");
- //    });
 
 }
 
@@ -43,36 +39,7 @@ function loginClick(e) {
 	    window.localStorage.setItem("user", JSON.stringify(data[username]));
 	 }
 	 else {
-	 /*
-	    var jsonNew =  `{
-	    "name":"Rick Ord",
-	    "username":"test123",
-	    "password":"123456",
-	    "phone":"",
-	    "picture":"http://jacobsschool.ucsd.edu/faculty/images/teacherawards/RickOrd.jpg",
-	  
-	    "recording": 
-	      [
-	      ],
-	    
-
-	    "family":
-	      [
-	      ],
-	    
-
-	    "routine":
-	      [
-	      ]
-	  }`;
-
-	  data[username] = JSON.parse(jsonNew);
-	  data[username].name = username;
-	  data[username].username = username;
-
-	  window.localStorage.setItem("user", JSON.stringify(data[username]));
-	  $.post('wList', data);
-		*/
+	 
 		alert('user not exists! '); 
 		return; 
 	}
