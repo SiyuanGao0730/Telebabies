@@ -16,7 +16,7 @@ function initializePage() {
 	if (window.localStorage.getItem('user')) {
 		location.href = 'index'; 
 	}
-	$(".login-button").click(loginClick);
+	$("#signinbutton").click(loginClick);
 
 	// $("#fb-custom").click( function (e) {
  //    	$("#fbbutton").performClick();
@@ -27,7 +27,7 @@ function initializePage() {
 
 function loginClick(e) {
 	e.preventDefault();
-
+	console.log("Login button is clicked");
 	var data = JSON.parse($.ajax({type: "GET", url: "rList", async: false}).responseText);
 	
 	var username = document.getElementById('nameinput').value;
@@ -67,7 +67,6 @@ function loginClick(e) {
 	      ]
 	  }`;
 
-	  console.log(jsonNew);
 	  data[username] = JSON.parse(jsonNew);
 	  data[username].name = username;
 	  data[username].username = username;
