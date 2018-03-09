@@ -2,7 +2,7 @@ var data = JSON.parse($.ajax({type: "GET", url: "rList", async: false}).response
   
 
 function checkLoginState() {
-  FB.getLoginStatus(function(response) {
+  FB.login(function(response) {
     statusChangeCallback(response);
   });
 }
