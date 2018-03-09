@@ -28,6 +28,9 @@ var signup = require('./routes/signup');
 var watson = require('watson-developer-cloud');
 var ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
 
+/*** call the script that checks for twilio notificaiton **/
+require('./routes/routine-text.js');
+
 
 // Example route
 // var user = require('./routes/user');
@@ -105,8 +108,8 @@ app.get('/profile', profile.view);
 app.get('/record', record.view); 
 app.get('/result', result.view); 
 app.get('/result2', result.view2); 
-app.get('/result-history', resulthistory.view); 
-app.get('/result-history2', resulthistory.view2); 
+app.get('/result-history', resulthistory.view);
+app.get('/result-history2', resulthistory.view2);  
 app.get('/familymembers', familymembers.view);
 app.get('/signup', signup.view);
 
@@ -129,7 +132,6 @@ app.post('/api/tone', function(req, res, next) {
 
 app.post('/wResult', function(req, res, next) {
 	let data = JSON.stringify(req.body); 
-	console.log(req.body); 
 	fs.writeFileSync('./result.json', data);  
 }); 
 
@@ -146,8 +148,7 @@ app.post('/rResult', function(req, res, next) {
 /***************** user list ***********/
 
 app.post('/wList', function(req, res, next) {
-  let data = JSON.stringify(req.body);  
-  console.log(data); 
+  let data = JSON.stringify(req.body);   
   fs.writeFileSync('./user_list.json', data);  
 });
 
@@ -159,12 +160,6 @@ app.get('/rList', function(req, res, next) {
       res.send(data); 
   });
 });
-
-
-
-
-
-
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
