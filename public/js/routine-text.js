@@ -1,8 +1,8 @@
 //check for alert every minnute
 var CronJob = require('cron').CronJob;
-new CronJob('* * * * *', function() {
+new CronJob('* * * * * *', function() {
 
-  console.log("Checking for alert");
+  console.log("Checking for alerts");
 
   //clear the cache to get the latest user_list
   delete require.cache[require.resolve('../user_list.json')];
@@ -37,7 +37,11 @@ new CronJob('* * * * *', function() {
 
   //get current time and parse it to the database time string
   var currTime;
-  var dateObj = new Date(Date.now());
+  var date = new Date();
+  var utcDate = new Date(date.toUTCString());
+  utcDate.setHours(utcDate.getHours()-8);
+  var dateObj = new Date(utcDate);
+
   if (dateObj.getHours() && dateObj.getMinutes()) {
 
       var minuteStr = dateObj.getMinutes().toString();
@@ -61,6 +65,8 @@ new CronJob('* * * * *', function() {
 
       currTime = hourStr + ":" + minuteStr + M;
     }
+
+    console.log(currTime);
 
     //loop through each user in user_list
     for(var user in list) {
