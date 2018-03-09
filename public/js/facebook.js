@@ -43,22 +43,16 @@ function changeUser(response) {
   
     "recording": 
       [
-        {"date":"1519702627312"}
       ],
     
 
     "family":
       [
-        {"name":"Kevin"},
-        {"name":"Sarah"}
       ],
     
 
     "routine":
       [
-        {"time":"06:00 PM","repeat":"daily","id":"0","on":false},
-        {"time":"04:15 PM","repeat":"daily","id":"1","on":false},
-        {"time":"01:00 AM","repeat":"monthly","id":"2","on":false}
       ]
   }`;
 

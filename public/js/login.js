@@ -13,6 +13,9 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+	if (window.localStorage.getItem('user')) {
+		location.href = 'index'; 
+	}
 	$(".login-button").click(loginClick);
 
 	// $("#fb-custom").click( function (e) {
@@ -28,47 +31,52 @@ function loginClick(e) {
 	var data = JSON.parse($.ajax({type: "GET", url: "rList", async: false}).responseText);
 	
 	var username = document.getElementById('nameinput').value;
+	var pw = document.getElementById('pwinput').value;
+	if (username == '' || pw == '') {
+		alert('Fill in both username and password'); 
+		return; 
+	}
 	if (data[username] != undefined) {
+			if (data[username].password != pw) {
+				alert('password is wrong'); 
+				return; 
+			}
 	    window.localStorage.setItem("user", JSON.stringify(data[username]));
 	 }
 	 else {
+	 /*
 	    var jsonNew =  `{
 	    "name":"Rick Ord",
-	    "username":"` + username + `",
+	    "username":"test123",
 	    "password":"123456",
 	    "phone":"",
 	    "picture":"http://jacobsschool.ucsd.edu/faculty/images/teacherawards/RickOrd.jpg",
 	  
 	    "recording": 
 	      [
-	        {"date":"1519702627312"}
 	      ],
 	    
 
 	    "family":
 	      [
-	        {"name":"Kevin"},
-	        {"name":"Sarah"}
 	      ],
 	    
 
 	    "routine":
 	      [
-	        {"time":"06:00 PM","repeat":"daily","id":"0","on":false},
-	        {"time":"04:15 PM","repeat":"daily","id":"1","on":false},
-	        {"time":"01:00 AM","repeat":"monthly","id":"2","on":false}
 	      ]
 	  }`;
 
 	  console.log(jsonNew);
 	  data[username] = JSON.parse(jsonNew);
-	  //data[username].name = response.name;
-	  //data[username].username = response.email;
-	  //data[username].picture = response.picture.data.url;
+	  data[username].name = username;
+	  data[username].username = username;
 
 	  window.localStorage.setItem("user", JSON.stringify(data[username]));
 	  $.post('wList', data);
-
+		*/
+		alert('user not exists! '); 
+		return; 
 	}
 	location.href = 'index'; 
 }

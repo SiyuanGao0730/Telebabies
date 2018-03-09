@@ -16,9 +16,8 @@ function initializePage() {
 	$(".profile").html("<img src=" + data.picture + " class=\"profile-photo\">");
 
 
-	$(".phone-input").keyup(function(e) {
+	$(".phone-input").focusout(function(e) {
 		e.preventDefault();
-		if (e.which !== 13) return; 
 		window.alert("Phone number set succesfully!")
 		var phone = $('.phone-input')[0].value;
 
@@ -28,6 +27,10 @@ function initializePage() {
 		$.post('wList', list); 
 		
 	});
+
+	$('.logout').click(function(e) {
+		window.localStorage.clear(); 
+	}); 
 	//initGestures(); 
 }
 
