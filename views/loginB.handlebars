@@ -59,39 +59,16 @@
    <!--  <div class="padding"></div> -->
 
     <div class="login-button">
-        <a href="index">
-            <img src="/images/fblogin.png" href="#" class="img-responsive" id="fb-custom"></a>
+        <a href="#" onclick="checkLoginState();">
+        <img src="/images/fblogin.png" href="#" class="img-responsive" id="fb-custom"></a>
     </div>
 
-
-    <div class="facebookLogin">
-    <a href="index" id="fblink">
-        <fb:login-button id="fbbutton" size="xlarge" scope="public_profile,email" href="#"  onlogin="checkLoginState();"></fb:login-button>
-    </a>
-    </div>
 
     <p class="signupinstr">New friend? <span><a href="signup" style="color:#D3A9AC;">Sign up here</a></span>
     </p>
-    <script>
-    (function ($) {
-    $(function () {
-        $("#fb-custom").on("click", function () {
-            FB.login(function(response) {
-                if (response.authResponse) {
-                    _wdfb_notifyAndRedirect();
-                }
-            });
-        });
-    });
-    })(jQuery);
 
-    // $("#fb-custom").on("click", function () {
-             
-    //          $("#fblink").trigger('click');
-    //      });    
-    </script>
+    
 
-    </p>
 
     </main><!-- /.container --></body>
 
