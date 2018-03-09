@@ -37,12 +37,7 @@ new CronJob('* * * * *', function() {
 
   //get current time and parse it to the database time string
   var currTime;
-
-  /** convert UTC time to PST time **/
-  var date = new Date();
-  var dateObj = new Date(date.toUTCString());
-  dateObj.setHours(dateObj.getUTCHours()-8);
-
+  var dateObj = new Date(Date.now());
   if (dateObj.getHours() && dateObj.getMinutes()) {
 
       var minuteStr = dateObj.getMinutes().toString();
