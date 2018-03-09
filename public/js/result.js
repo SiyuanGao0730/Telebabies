@@ -13,7 +13,6 @@ function initializePage() {
 	$.post('/rResult', function(data) {
 		var content = JSON.parse(data); 
 		renderText(content); 
-		console.log(content); 
 	}); 
 }
 
@@ -45,7 +44,6 @@ if (window.localStorage.getItem('time')) {
 if (content[user]) {
 	
 	for (var i = 0; i < content[user].length; i++) {
-		console.log(dateConvert(user[i].date));
 		if (content[user][i].date == time) {
 			$('.notes2').html(content[user][i].time); 
 			$('.text-panel').append(content[user][i].text); 

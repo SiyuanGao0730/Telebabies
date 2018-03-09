@@ -43,12 +43,10 @@ function processResult(content) {
 	new Slip(swipe);
 
 	swipe.addEventListener('slip:beforeswipe', function(e) {
-		console.log("beforeswipe");
 	});
 
 	swipe.addEventListener('slip:swipe', function(e) {
     	// e.target list item swiped;
-    	console.log("sipweed");
     	if (confirm("Confirm deletion?")) {
         // list will collapse over that element
 				var id = e.target.id; 

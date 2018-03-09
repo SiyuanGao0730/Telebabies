@@ -27,7 +27,6 @@ function initializePage() {
 
 function loginClick(e) {
 	e.preventDefault();
-	console.log("Login button is clicked");
 	var data = JSON.parse($.ajax({type: "GET", url: "rList", async: false}).responseText);
 	
 	var username = document.getElementById('nameinput').value;

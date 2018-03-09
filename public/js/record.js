@@ -44,10 +44,8 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
-	console.log(dateConvert(resultJSON.date)); 
 	$.post('/rResult', function(data) {
 		content = JSON.parse(data); 
-		console.log(content); 
 	}); 
 
   document.querySelector('.stop-btn').onclick = function() {

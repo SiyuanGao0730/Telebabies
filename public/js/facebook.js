@@ -9,7 +9,6 @@ function checkLoginState() {
 
 function statusChangeCallback(response) {
   console.log('Facebook login status changed.');
-  console.log(response);
   // The response object is returned with a status field that lets the
   // app know the current login status of the person.
   // Full docs on the response object can be found in the documentation
@@ -22,10 +21,6 @@ function statusChangeCallback(response) {
 }
 
 function changeUser(response) {
-
-	console.log('a'); 
-	console.log(response); 
-  console.log(response.email);
 
   var username = response.email;
 
