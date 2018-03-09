@@ -28,7 +28,6 @@ function processResult(content) {
 	var hisList = content[username]; 
 	if (hisList) {
 		for (var i = 0; i < hisList.length; i++) {
-			console.log('aaa');
 			$('.notes').append('<li id="' + hisList[i].date + '">' +
 			dateConvert(parseInt(hisList[i].date)) + '</li>'); 
 		}	
@@ -52,6 +51,16 @@ function processResult(content) {
     	console.log("sipweed");
     	if (confirm("Confirm deletion?")) {
         // list will collapse over that element
+				var id = e.target.id; 
+				for (var i = 0; i < hisList.length; i++) {
+					if (hisList[i].date == id) {
+						hisList.splice(i, 1); 
+						content[username] = hisList; 
+						$.post('wResult', content); 
+						break; 
+					}
+				}	
+
        		e.target.parentNode.removeChild(e.target);
 
        		//hide the "repeat" bar
