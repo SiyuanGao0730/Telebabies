@@ -13,7 +13,6 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
-
 	$(".login-button").click(loginClick);
 
 	// $("#fb-custom").click( function (e) {
@@ -29,7 +28,6 @@ function loginClick(e) {
 	var data = JSON.parse($.ajax({type: "GET", url: "rList", async: false}).responseText);
 	
 	var username = document.getElementById('nameinput').value;
-
 	if (data[username] != undefined) {
 	    window.localStorage.setItem("user", JSON.stringify(data[username]));
 	 }
@@ -72,8 +70,7 @@ function loginClick(e) {
 	  $.post('wList', data);
 
 	}
-  	location.href = '/index';
-	
+	location.href = 'index'; 
 }
 		
 
