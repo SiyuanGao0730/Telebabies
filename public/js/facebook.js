@@ -34,7 +34,7 @@ function changeUser(response) {
     window.localStorage.setItem("user", JSON.stringify(data[username]));
   }
   else {
-    var jsonNew =  `{
+    var jsonNew =  {
     "name":"Rick Ord",
     "username":"test123",
     "password":"123456",
@@ -54,9 +54,9 @@ function changeUser(response) {
     "routine":
       [
       ]
-  }`;
+  };
 
-  data[username] = JSON.parse(jsonNew);
+  data[username] = jsonNew;
   data[username].name = response.name;
   data[username].username = response.email;
   data[username].picture = response.picture.data.url;
