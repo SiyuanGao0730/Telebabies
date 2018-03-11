@@ -40,11 +40,11 @@ function signupClick(e) {
 		return; 
 	}
 	if (data[username] != undefined) {
-		alert('User already exists!'); 
+		alert('This username has been used. Please try another.'); 
 		return; 
 	 }
 	 if (pw != cpw) {
-		alert('Passwords do not match! '); 
+		alert('Passwords do not match. Please make sure you enter the right passwords.'); 
 		return; 
 	 }
  
@@ -79,7 +79,7 @@ function signupClick(e) {
 	window.localStorage.setItem("user", JSON.stringify(data[username]));
 	$.post('wList', data);
 
-	location.href = 'index'; 
+	location.href = 'indexB'; 
 }
 		
 

@@ -60,7 +60,7 @@ function changeUser(response) {
   $.post('wList', data);
 
 	}
-  location.href = '/index';
+  location.href = '/indexB';
 
 
 }

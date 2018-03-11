@@ -28,19 +28,19 @@ function loginClick(e) {
 	var username = document.getElementById('nameinput').value;
 	var pw = document.getElementById('pwinput').value;
 	if (username == '' || pw == '') {
-		alert('Fill in both username and password'); 
+		alert('Please enter both your username and password.'); 
 		return; 
 	}
 	if (data[username] != undefined) {
 			if (data[username].password != pw) {
-				alert('password is wrong'); 
+				alert('Wrong password. Please try again.'); 
 				return; 
 			}
 	    window.localStorage.setItem("user", JSON.stringify(data[username]));
 	 }
 	 else {
 	 
-		alert('user not exists! '); 
+		alert('User does not exist! '); 
 		return; 
 	}
 	location.href = 'index'; 
