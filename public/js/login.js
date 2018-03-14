@@ -14,7 +14,7 @@ $(document).ready(function() {
 function initializePage() {
 	console.log("Javascript connected!");
 	if (window.localStorage.getItem('user')) {
-		location.href = 'index'; 
+		location.href = 'indexB'; 
 	}
 	$("#signinbutton").click(loginClick);
 
@@ -43,7 +43,7 @@ function loginClick(e) {
 		alert('User does not exist! '); 
 		return; 
 	}
-	location.href = 'index'; 
+	location.href = 'indexB'; 
 }
 		
 

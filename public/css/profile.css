@@ -33,7 +33,7 @@
 	height: 20vh;
 	width: 20vh;
 	position: absolute;
-	top: 18vh; 
+	top: 22vh; 
 	border-radius: 50%;
 }
 
@@ -65,9 +65,9 @@
 
 .username{
 	position: absolute;
-  top: 39vh;
+  	top: 46vh;
 	font-size: 7vw;
-  color: #D3A9AC;
+  	color: #D3A9AC;
 	left: 50%;
 	margin-right: -50%; 
 	transform: translate(-50%, -50%);
@@ -75,7 +75,7 @@
 
 .functions{
 	position:absolute;
-	top: 49vh;
+	top: 55vh;
 }
 
 .notes-right {
