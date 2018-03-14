@@ -122,6 +122,7 @@ function toneCallback(result, id) {
 	} 
 	$('#text' + id).css('background-color', mood[curTone.tone]);
 	$('.notes2').html('Current mood: ' + curTone.tone); 
+	$('.notes2').css('color', mood[curTone.tone]); 
 }
 
 function getRecognizeOptions(token) {
