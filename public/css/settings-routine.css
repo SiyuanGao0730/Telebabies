@@ -18,3 +18,12 @@
 	height: 5vh;
 	width: 100vw;
 }
+
+.plus {
+	max-width: 22vw;
+	position: absolute;
+	top: 90%; 
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

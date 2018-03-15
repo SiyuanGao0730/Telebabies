@@ -16,12 +16,13 @@ resultJSON.time = '0:0:0';
 
 
 var mood = {
-	'anger': 'red', 
-	'analytical': 'blue', 
-	'confident': 'purple', 
-	'fear': 'green', 
-	'tentative': 'cyan', 
-	'joy': 'orange', 
+	'anger': '#D3A9AC', 
+	'analytical': 'SteelBlue', 
+	'confident': 'RebeccaPurple', 
+	'fear': 'OliveDrab', 
+	'tentative': 'DimGray', 
+	'joy': 'DarkSalmon', 
+	'fear': 'Sienna',
 	'not detected': 'transparent'
 };
 
@@ -121,6 +122,7 @@ function toneCallback(result, id) {
 	} 
 	$('#text' + id).css('background-color', mood[curTone.tone]);
 	$('.notes2').html('Current mood: ' + curTone.tone); 
+	$('.notes2').css('color', mood[curTone.tone]); 
 }
 
 function getRecognizeOptions(token) {

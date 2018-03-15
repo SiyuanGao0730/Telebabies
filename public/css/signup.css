@@ -41,3 +41,12 @@
 	vertical-align: center;
 	top: 25vh;
 }
+
+.back-button {
+	width: 11vw; 
+	max-width: 9vh; 
+	max-height: 9vh; 
+	position: absolute;
+	left: -13vw;
+	top: 5vh;
+}
