@@ -34,13 +34,7 @@ function confirm(e) {
 	// console.log(selectedTime);
 	var dateObj = new Date(Date.parse(selectedTime)); 
 
-	var size; 
-	if (data.routine.length === undefined) {
-		size = 0;
-	}
-	else {
-		size = data.routine.length;
-	}
+	var size = data.routine.length;
 
 	if ((dateObj.getHours() || dateObj.getHours() == 0) && 
 		(dateObj.getMinutes() || dateObj.getMinutes() == 0)) {
