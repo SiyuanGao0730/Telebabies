@@ -47,7 +47,7 @@ function changeUser(response) {
     
 
     "routine":
-      [
+      [ {"time":"06:00 PM","repeat":"daily","id":"0","on":false}
       ]
   };
 
@@ -55,6 +55,7 @@ function changeUser(response) {
   data[username].name = response.name;
   data[username].username = response.email;
   data[username].picture = response.picture.data.url;
+  data[username].routine = [];
 
   window.localStorage.setItem("user", JSON.stringify(data[username]));
   $.post('wList', data);

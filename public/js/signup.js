@@ -65,9 +65,9 @@ function signupClick(e) {
 			],
 		
 
-		"routine":
-			[
-			]
+   		"routine":
+      		[ {"time":"06:00 PM","repeat":"daily","id":"0","on":false}
+      		]
 	};
 
 	data[username] = jsonNew;
@@ -75,6 +75,7 @@ function signupClick(e) {
 	data[username].username = username;
 	data[username].phone = phone;
 	data[username].password = pw;
+	data[username].routine = [];
 
 	window.localStorage.setItem("user", JSON.stringify(data[username]));
 	$.post('wList', data);
