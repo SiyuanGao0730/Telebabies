@@ -74,6 +74,9 @@ new CronJob('* * * * *', function() {
       for(var id in routines) {
         var alertTime = routines[id].time;
 
+        console.log("current time: " + currTime);
+        console.log("alert time: " + alertTime);
+
         if(alertTime == currTime && routines[id].on && list[user].phone != "") {
 
           /**send the text msg **/
