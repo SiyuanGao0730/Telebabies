@@ -39,6 +39,19 @@ function signupClick(e) {
 		alert('Fill in all blanks'); 
 		return; 
 	}
+	if (username.indexOf('@') === -1 || username.indexOf('.') === -1 ||
+	username.indexOf('@') > username.indexOf('.') || username.indexOf('.') ===
+	username.length - 1 || username.indexOf('@') === 0 || username.indexOf('@')
+	=== username.indexOf('.') - 1) {
+		alert('Your email address is not valid! '); 
+		return; 
+	}
+
+	if (pw.length < 6) {
+		alert('Your password is not long enough! '); 
+		return; 
+	}
+
 	if (data[username] != undefined) {
 		alert('This username has been used. Please try another.'); 
 		return; 
@@ -46,6 +59,10 @@ function signupClick(e) {
 	 if (pw != cpw) {
 		alert('Passwords do not match. Please make sure you enter the right passwords.'); 
 		return; 
+	 }
+
+	 if (!parseInt(phone) || phone.length !== 10) {
+		alert('Your phone number has wrong format! '); 
 	 }
  
 		var jsonNew =  {

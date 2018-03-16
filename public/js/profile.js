@@ -18,9 +18,12 @@ function initializePage() {
 
 	$(".phone-input").focusout(function(e) {
 		e.preventDefault();
-		window.alert("Phone number set succesfully!")
 		var phone = $('.phone-input')[0].value;
-
+		if (!parseInt(phone) || phone.length !== 10) {
+			window.alert('Your phone number has wrong format! '); 
+			return; 
+		}
+		window.alert("Phone number set succesfully!")
 		data.phone = phone;
 		list[data.username] = data;
 		window.localStorage.setItem("user", JSON.stringify(data));
