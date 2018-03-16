@@ -69,7 +69,7 @@ function confirm(e) {
 		list[data.username] = data;
 		window.localStorage.setItem("user", JSON.stringify(data));
 		$.post('wList', list); 
-		location.href = '/settings'; 
+		window.location = '/settings'; 
 	} else {
 		alert("choose time"); 
 	}
