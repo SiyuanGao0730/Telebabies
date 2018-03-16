@@ -80,7 +80,7 @@ new CronJob('* * * * *', function() {
           client.messages.create({
             body: 'Alert from Telebabies: ' + alertTime,
             to: list[user].phone,  
-            from: '+16195682588' // From a valid Twilio number
+            from: credential.phone // From a valid Twilio number
           })
           .then((message) => console.log(message.sid));
         }
