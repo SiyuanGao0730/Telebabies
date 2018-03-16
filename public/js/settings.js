@@ -22,6 +22,9 @@ $(document).ready(function() {
 function initializePage() {
 	console.log("Javascript connected!");
 
+	if (!data.routine) {
+		data.routine = []; 
+	}
 	for (var i = 0; i < data.routine.length; i ++) {
 		var str1 = `<div class="routine-bar" id=`;
 		var str2 = `><span class="notes">`;

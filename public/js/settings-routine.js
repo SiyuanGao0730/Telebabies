@@ -34,6 +34,9 @@ function confirm(e) {
 	// console.log(selectedTime);
 	var dateObj = new Date(Date.parse(selectedTime)); 
 
+	if (!data.routine) {
+		data.routine = []; 
+	}
 	var size = data.routine.length;
 
 	if ((dateObj.getHours() || dateObj.getHours() == 0) && 
