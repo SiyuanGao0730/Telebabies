@@ -41,7 +41,7 @@ new CronJob('* * * * *', function() {
   /** convert UTC time to PST time **/
   var date = new Date();
   var dateObj = new Date(date.toUTCString());
-  dateObj.setHours(dateObj.getUTCHours()-8);
+  dateObj.setHours(dateObj.getUTCHours()-7);
 
   if (dateObj.getHours() && dateObj.getMinutes()) {
 
